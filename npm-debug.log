@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\JCastillo\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.10.3
+3 info using node@v6.2.2
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle angular2-quickstart@1.0.0~prestart: angular2-quickstart@1.0.0
+6 silly lifecycle angular2-quickstart@1.0.0~prestart: no script for prestart, continuing
+7 info lifecycle angular2-quickstart@1.0.0~start: angular2-quickstart@1.0.0
+8 verbose lifecycle angular2-quickstart@1.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle angular2-quickstart@1.0.0~start: PATH: C:\Users\JCastillo\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;D:\js-projects\angular2-playground\node_modules\.bin;D:\nodejs;D:\Subversion;d:\oracle\product\11.2.0\client_1\bin;D:\apache-maven-3.3.9\bin;D:\software\java\jdk1.8.0_60\bin;D:\apache-ant-1.8.3\bin;C:\Program Files (x86)\ImageMagick-6.8.1-Q16;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\IBM\Client Access\Emulator;C:\Program Files (x86)\IBM\Client Access\Shared;C:\Program Files (x86)\IBM\Client Access\;C:\Program Files (x86)\NetSupport\NetSupport DNA\Client;D:\mongodb\bin;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;D:\gradle\bin;D:\Ruby193\bin;D:\ruby-devkit\bin;D:\OpenSSL-Win64\bin;D:\SuperPutty;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\TortoiseSVN\bin;C:\Users\JCastillo\AppData\Roaming\npm;D:\sonar-runner-2.4\bin;C:\Program Files\Git\bin;D:\nodejs\;D:\Docker Toolbox;C:\Users\JCastillo\AppData\Local\atom\bin;C:\Users\JCastillo\AppData\Roaming\npm
+10 verbose lifecycle angular2-quickstart@1.0.0~start: CWD: D:\js-projects\angular2-playground
+11 silly lifecycle angular2-quickstart@1.0.0~start: Args: [ '/d /s /c', 'tsc && concurrently "tsc -w" "lite-server" ' ]
+12 silly lifecycle angular2-quickstart@1.0.0~start: Returned: code: 2  signal: null
+13 info lifecycle angular2-quickstart@1.0.0~start: Failed to exec start script
+14 verbose stack Error: angular2-quickstart@1.0.0 start: `tsc && concurrently "tsc -w" "lite-server" `
+14 verbose stack Exit status 2
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\JCastillo\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:242:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Users\JCastillo\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:852:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
+15 verbose pkgid angular2-quickstart@1.0.0
+16 verbose cwd D:\js-projects\angular2-playground
+17 error Windows_NT 6.1.7601
+18 error argv "D:\\nodejs\\node.exe" "C:\\Users\\JCastillo\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "start"
+19 error node v6.2.2
+20 error npm  v3.10.3
+21 error code ELIFECYCLE
+22 error angular2-quickstart@1.0.0 start: `tsc && concurrently "tsc -w" "lite-server" `
+22 error Exit status 2
+23 error Failed at the angular2-quickstart@1.0.0 start script 'tsc && concurrently "tsc -w" "lite-server" '.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the angular2-quickstart package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     tsc && concurrently "tsc -w" "lite-server"
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs angular2-quickstart
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls angular2-quickstart
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
