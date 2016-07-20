@@ -1,5 +1,8 @@
-<p>Cargamos UserDetailComponent</p>
 <div *ngIf="user">
-    <p>{{user.id}}</p>
+    <h2>One Way Data Binding:</h2>
     <p>{{user.name}}</p>
+    <h2>HTML Property Binding:</h2>
+    <input [placeholder]="user.name"/>
+    <h2>2 Way Data Binding:</h2>
+    <input [(ngModel)]="user.name" placeholder="name" />
 </div>

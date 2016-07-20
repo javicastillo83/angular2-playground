@@ -1,7 +1,8 @@
+import {Logger} from "../../shared/logger/logger.service";
 import {User} from "../user";
 import {UserService} from "../user.service";
 import {ActivatedRoute} from '@angular/router';
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, OnDestroy, Input} from "@angular/core";
 
 @Component({
     selector: 'user-detail',
@@ -9,18 +10,26 @@ import {Component, OnInit} from "@angular/core";
     styleUrls: ['app/users/detail/user-detail.component.css'],
     providers: [UserService]
 })
-export class UserDetailComponent implements OnInit {
+export class UserDetailComponent implements OnInit, OnDestroy {
 
+    @Input()
     user: User;
 
-    constructor(private userService: UserService,
-        private route: ActivatedRoute) { }
+    paramSubscription: any;
+
+    constructor(private route: ActivatedRoute, private logger: Logger, private userService: UserService) { }
 
     ngOnInit() {
-        this.route.params.subscribe(params => {
-            let id = +params['id']; //(+) para convertir a number
-            this.userService.getUser(id).then( (user) => this.user = user);
+        this.logger.debug("ngOnInit from UserDetailComponent is called");
+        this.paramSubscription = this.route.params.subscribe(params => { //cargamos user si viene por parametro el id
+            if (params['id'] != null) {
+                let id = +params['id']; //(+) para convertir a number
+                this.userService.getUser(id).then((user) => this.user = user);
+            }
         });
+    }
 
+    ngOnDestroy() {
+      this.paramSubscription.unsubscribe()
     }
 }

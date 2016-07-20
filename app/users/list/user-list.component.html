@@ -1,9 +1,12 @@
 <p>Cargamos UserListComponent</p>
-  <div>
-  <ul>
-      <li *ngFor="let user of users">
-          {{user.id}}
-          {{user.name}}
-      </li>
-  </ul>
+<div>
+    <ul>
+        <li *ngFor="let user of users">
+            <button (click)="selectUser(user)">{{user.name}}</button>
+        </li>
+        <div *ngIf="selectedUser">
+          <button (click)="showDetail()">Go to Detail</button>
+          <user-detail [user]="selectedUser"></user-detail>
+        </div>
+    </ul>
 </div>

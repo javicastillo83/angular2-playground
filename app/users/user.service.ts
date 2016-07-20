@@ -1,15 +1,21 @@
+import {Logger} from "../shared/logger/logger.service";
 import {User} from "./user";
 import {Injectable} from "@angular/core";
 
 @Injectable()
 export class UserService {
 
-    getUser(id: number) : Promise<User> {
-        return Promise.resolve({ id: 1, name: 'javi' })
+    constructor(private logger: Logger) {  }
+
+
+    getUser(id: number): Promise<User> {
+        this.logger.debug("getUser from UserService is called");
+        return Promise.resolve({ id: id, name: 'javi' + id })
     }
 
     getUsers(): Promise<User[]> {
-        return Promise.resolve([
+      this.logger.debug("getUsers from UserService is called");
+      return Promise.resolve([
             {
                 id: 1,
                 name: 'javi1'
